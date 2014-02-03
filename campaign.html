@@ -1,0 +1,63 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<html>
+<head>
+<script src="js/jquery-2.js"></script>
+<link rel="stylesheet" type="text/less" href="css/style.less">
+<script src="js/less-1.6.1.min.js"></script>
+<script src="js/storage.min.js"></script>
+</head>
+
+<body id="campaignPlan">
+<section class="AppPage" id="campaign">
+	<header><h1>plan your campaign</h1>
+	<h3 class="credRemaining">Credits Remaining: <span></span></h3>
+	</header>
+	
+	<a href="launched.html" class="button" id="launchButton">launch your business</a>
+	</header>
+	<div class="OptionContainer">
+		<figure>
+			<a href="#" data-id="recipe"><img src="images/recipe.png" align="center">
+			<figcaption>the perfect recipe</figcaption></a>
+		</figure>
+		<figure>
+			<a href="#" data-id="limited_edition"><img src="images/limited_edition.png" align="center">
+			<figcaption>limited edition</figcaption></a>
+		</figure>
+		<figure>
+			<a href="#" data-id="allegiance"><img src="images/alleigance.png" align="center">
+			<figcaption>show support</figcaption></a>
+		</figure>
+		<figure>
+			<a href="#" data-id="sample"><img src="images/sample.png" align="center">
+			<figcaption>free samples</figcaption></a>
+		</figure>
+		<figure>
+			<a href="#" data-id="recruit"><img src="images/recruit_friends.png" align="center">
+			<figcaption>buddy campaign</figcaption></a>
+		</figure>
+		<figure>
+			<a href="#" data-id="rewards"><img src="images/rewards.png" align="center">
+			<figcaption>rewards</figcaption></a>
+		</figure>
+	</div>
+</section>
+<section class="AppPage" id="options">
+	<header><h1 id="optionTitle"></h1>
+	<h3 class="credRemaining">Credits Remaining: <span></span></h3>
+	<h3 id="error">not enough credits!</h3>
+	</header>
+	<ul id="optionsList">
+		
+	</ul>
+	<div id="buttons">
+		<a href="#" class="button" id="saveBtn">save</a>
+		<a href="#" class="button" id="backBtn">back</a>
+	</div>
+</section>
+<script src="js/dataModel.js"></script>
+<script src="js/initialize.js"></script>
+</body>
+</html>

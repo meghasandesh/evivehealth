@@ -1,0 +1,252 @@
+/* mixins */
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+@font-face {
+    font-family: 'kelveticaregular';
+    src: url('../fonts/kelvetica-webfont.eot');
+    src: url('../fonts/kelvetica-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kelvetica-webfont.woff') format('woff'),
+         url('../fonts/kelvetica-webfont.ttf') format('truetype'),
+         url('../fonts/kelvetica-webfont.svg#kelveticaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* style rules */
+body {
+	padding: 0;
+	margin: 0;
+	color: #FFF;
+	font-family: kelveticaregular;
+}
+
+#campaignPlan {
+	background: #35D2AB;
+}
+
+#homepage {
+	background: #FFDC40;
+}
+
+.AppPage {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+#logo {
+	max-width: 500px;
+	margin: 0 auto;
+	display: block;
+}
+
+#launchButton {
+	display: none;
+}
+
+figure {
+	width: 25%;
+	display: inline-block;
+	margin: 20px 4%;
+	
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	font-size: 40px;
+}
+
+figcaption {
+	font-size: 36px;
+	text-align: center;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-family: kelvetica;
+	font-size: 60px;
+	color: #FFF;
+	margin: 0;
+	font-weight: light;
+}
+
+.OptionContainer {
+		max-width: 1000px;
+		margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	
+	&:visited {
+		color: inherit;
+	}
+}
+
+
+a.button {
+	text-align: center;
+	max-width: 400px;
+	margin: 20px auto;
+	display: block;
+	background: #FFF;
+	color: #FFDC40;
+	font-size: 36px;
+	.rounded-corners(10px);
+	
+	&:hover {
+		background: #181518;
+	}
+}
+
+#buttons {
+	a.button {
+		color: #FF8740;
+		max-width: 90%;
+	}
+}
+
+#campaign .button {
+	color: #35D2AB;
+	max-width: 90%;
+}
+
+#campaignOptions {
+	background: #FF8740;
+}
+
+#launch {
+	background: #FFDC40;
+	text-align: center;
+	h2 {
+		font-size: 40px;
+	}
+	
+	img {
+		margin-top: 40px;
+		max-width: 90%;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.button {
+		max-width: 90%;
+	}
+}
+
+#optionsList {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 40px;
+		
+	li {
+		font-size: 36px;
+		margin: 20px 25px;
+		cursor: pointer;
+		.radio {
+			width: 50px;
+			height: 50px;
+			background: url('../images/radioSprite.png') 0 0;
+			border: 0px;
+			outline: none;
+			vertical-align: middle;
+			margin-right: 15px;
+		}
+	}
+	
+	.radioSelected .radio {
+		background-position: -50px 0;
+	}
+	
+	.optionText {
+		padding-right: 30%;
+	}
+	
+	.optionCredit {
+		float: right;
+	}
+}
+
+#error {
+	color: rgb(206, 94, 94);
+	display: none;
+}
+
+#stats {
+	background: #E869AA;
+}
+
+/* phone */
+@media all and (max-width: 640px) {
+	.AppPage {
+		max-width: 640px;
+	}
+	
+	.OptionContainer {
+		max-width: 600px;
+	}
+	
+	figure {
+		margin: 20px 10%;
+	}
+	
+	#logo {
+		width: 90%;
+	}
+	
+	a.button {
+		width: 90%;
+	}
+	
+	h3 {
+		font-size: 36px;
+	}
+}
+
+@media all and (max-width: 540px) {
+	h1 {
+		font-size: 48px;
+	}
+	
+	figure {
+		img {
+			width: 100%;
+		}
+	}
+	
+	figcaption {
+		font-size: 32px;
+	}
+	
+	#optionsList {
+		li {
+		font-size: 32px;
+			.radio {
+				width: 32px;
+				height: 32px;
+				background: url('../images/radioSprite.png') 0 0;
+				background-size: 64px 32px;
+			}
+		}
+		.radioSelected .radio {
+			background-position: -32px 0;
+		}
+	}
+}
